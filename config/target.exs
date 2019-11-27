@@ -40,3 +40,14 @@ config :nerves_init_gadget,
 # Uncomment to use target specific configurations
 
 # import_config "#{Mix.target()}.exs"
+
+# configuration for PocketBeagle on-board LEDs (target bbb)
+config :blinky, led_list: [:led0, :led1, :led2, :led3]
+
+config :nerves_leds,
+  names: [
+    led0: "beaglebone:green:usr0",
+    led1: "beaglebone:green:usr1",
+    led2: "beaglebone:green:usr2",
+    led3: "beaglebone:green:usr3"
+  ]
