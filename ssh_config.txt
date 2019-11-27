@@ -1,0 +1,7 @@
+# Run `$ ssh-keygen -t rsa -f ~/.ssh/nerves_pocket_id_rsa` with no passphrase
+# Then, paste following fragment to ~/.ssh/config
+Host nerves_pocket.local
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  IdentityFile ~/.ssh/nerves_pocket_id_rsa
+
